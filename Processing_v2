@@ -1,0 +1,79 @@
+//Rock Band Audio-Visual Experience
+//Second version of program, changes background color on key press
+
+/*
+import ddf.minim.*;
+import ddf.minim.effects.*;
+
+Minim minim;
+Audioplayer 
+Audioplayer 
+Audioplayer
+Audioplayer 
+*/
+
+float w,l;
+PImage img;
+
+void setup() {
+  //cool color texture
+  //background(img = loadImage("rockband_texture.jpg"));
+  //white texture
+  //background(img = loadImage("white_texture.jpg"));
+  background(0,0,0);
+  size(500,500);
+  w=random(320,400);
+  l=random(100,200);
+  
+} //end setup 
+
+void draw() {
+  rectMode(CENTER);
+  noStroke();
+}
+
+/*
+//rainbow colours
+
+void keyPressed() {
+  if (key=='a') {
+    fill(random(255),random(10,50), random(30,50),10);
+    rect(random(0,255),random(0,125),w,l);
+  }
+  if (key=='s') {
+    fill(random(211,255),random(200,244), random(40,80), 10);
+    rect(random(0,255),random(125,250),w,l);
+  }
+  if (key=='d') {
+    fill(random(44,73),random(100,245),random(10,180),10);
+    rect(random(0,255),random(250,375),w,l);
+  }
+  if(key=='f') {
+    fill(random(99,110),random(15,28),random(230,255),10);
+    rect(random(0,255),random(375,500),w,l);
+  }
+  }
+ */
+ 
+ void keyPressed() {
+  if (key=='a') {
+    background(#395F32);
+    fill(random(150,180),random(33,88), random(130,150),random(180));
+    ellipse(random(500),random(500),w,l);
+  }
+  if (key=='s') {
+    background(#935401);
+    fill(random(70,100),random(244,255), random(244,255),random(180));
+    ellipse(random(500),random(500),w,l);
+  }
+  if (key=='d') {
+    background(#93287A);
+    fill(random(144,73),random(100,245),random(10,180),random(140));
+    ellipse(random(500),random(500),w,l);
+  }
+  if(key=='f') {
+    background(#FFEB79);
+    fill(random(99,110),random(15,28),random(230,255),random(140));
+    ellipse(random(500),random(500),w,l);
+  }
+  }
